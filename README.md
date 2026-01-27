@@ -25,7 +25,7 @@ The scans were performed on the **local system and local network IPs** to unders
 
 ##  Methodology
 
-### 1️ Basic Port Scan
+## Basic Port Scan
 ```bash
 1️) nmap 192.168.1.6
 Checked the default 1000 TCP ports
