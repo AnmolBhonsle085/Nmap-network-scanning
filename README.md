@@ -1,86 +1,53 @@
 # Nmap-network-scanning
 
 ##  Project Overview
-This project demonstrates the use of **Nmap** to perform basic network reconnaissance by identifying active hosts, port states, and service exposure in a **safe and controlled environment**.
 
-The scans were performed on the **local system and local network IPs** to understand how firewalls and network configurations affect scan results.
-
----
+This project demonstrates the use of Nmap to perform basic network reconnaissance by identifying host availability, port states, and service exposure in a safe and controlled environment. The scans were conducted only on authorized systems to understand how firewall configurations affect scan results.
 
 ## Objective
-- To understand how Nmap performs port scanning
-- To analyze port states such as open, closed, and filtered
-- To observe the impact of firewall protection on scan results
-- To gain hands-on experience with basic network reconnaissance
+The objective of this project is to learn how Nmap performs network scanning, identify open, closed, and filtered ports, and understand the importance of secure network configurations from a defensive security perspective.
 
----
+## Tools and Environment
+Tool used: Nmap
+Operating System: Kali Linux
+Network: Local Wi-Fi (authorized)
+Target IPs: localhost and personal device IP (192.168.1.6)
 
-##  Tools & Environment
-- **Nmap**
-- **Kali Linux**
-- Local Wi-Fi network (authorized)
-- Target IPs: `localhost`, `192.168.1.6` (own device)
+## Methodology
 
----
+## Step 1: Basic Port Scan
+A basic Nmap scan was performed to check host availability and scan the default set of TCP ports.
 
-##  Methodology
+## Step 2: Fast Scan
+A fast scan was conducted to quickly analyze commonly used ports and understand quick reconnaissance techniques.
 
-## Basic Port Scan
-```bash
-1️) nmap 192.168.1.6
-Checked the default 1000 TCP ports
+## Step 3: Service and Version Detection
+Service detection was attempted to identify any running services and their versions on the target system.
 
-Verified host availability
+## Step 4: Localhost Scan
+A localhost scan was performed to safely demonstrate service detection without interference from external firewalls.
 
-2️) Fast Scan
-nmap -F 192.168.1.6
-Scanned common ports only
-
-Used for quick reconnaissance
-
-3️) Service & Version Detection
-sudo nmap -sV 192.168.1.6
-Attempted to identify running services and versions
-
-4️) Localhost Scan
-nmap localhost
-sudo nmap -sV localhost
-Used loopback interface to safely observe service detection
-
-Avoided network firewall restrictions
-
-## Observations & Results
-The target host was reachable and online
-
-All scanned ports on the local network IP were filtered
-
-Filtered ports indicate firewall protection and no exposed services
-
-Localhost scan demonstrated how services can be detected in a controlled environment
+## Observations and Results
+The target host was reachable and active.
+All scanned ports on the local network IP were found to be filtered, indicating firewall protection.
+No externally exposed services were detected on the local network interface.
+Localhost scanning helped demonstrate how Nmap identifies services in a controlled environment.
 
 ## Security Insight
-Filtered ports reduce the attack surface and indicate a secure-by-default configuration, which is a recommended security practice in real-world environments.
+Filtered ports indicate a secure configuration where unnecessary services are not exposed. This reduces the attack surface and is considered a best practice in real-world security environments.
 
 ## Key Learnings
-Understanding how Nmap identifies host availability
-
-Difference between open, closed, and filtered ports
-
-Impact of firewalls on network scanning
-
-Importance of scanning only authorized systems
-
-Proper documentation of security findings
+Understanding how Nmap performs network reconnaissance
+Identifying different port states such as open, closed, and filtered
+Learning how firewalls affect scan results
+Gaining awareness of ethical and authorized scanning practices
+Improving documentation and reporting skills
 
 ## Ethical Considerations
-All scans were performed on authorized systems only (own machine and local environment).
-No unauthorized or external targets were scanned.
-
-## Screenshots
-Screenshots of scan results are included in the screenshots/ directory for reference and documentation.
+All scans were performed only on systems owned by the user or explicitly authorized for testing. No unauthorized or external targets were scanned during this project.
 
 ## Conclusion
-This project provided hands-on experience with network scanning using Nmap and reinforced the importance of secure configurations and ethical security practices.
+This project provided hands-on experience with Nmap and reinforced the importance of secure configurations and ethical behavior in cybersecurity. It helped build a foundational understanding of network scanning techniques used in security operations.
 
 ## Author
 Anmol Bhonsle
